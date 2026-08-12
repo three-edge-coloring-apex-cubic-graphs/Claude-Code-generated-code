@@ -1,0 +1,46 @@
+{
+    "enabledPlugins": {
+        "document-skills@anthropic-agent-skills": true,
+        "pyright-lsp@claude-plugins-official": true
+    },
+    "permissions": {
+        "allow": [
+            "WebFetch(domain:arxiv.org)",
+            "Bash(ls *)",
+            "Bash(cat *)",
+            "Bash(head *)",
+            "Bash(tail *)",
+            "Bash(grep *)",
+            "Bash(find *)",
+            "Bash(wc *)",
+            "Bash(pwd)",
+            "Bash(echo *)",
+            "Bash(pdfinfo *)",
+            "Bash(pdftotext *)",
+            "Bash(pdftoppm *)",
+            "Bash(pdfimages *)",
+            "Bash(pdffonts *)",
+            "Bash(pip show *)",
+            "Bash(pip list *)",
+            "Bash(mkdir -p *)"
+        ],
+        "deny": [
+            "Bash(rm -rf /*)",
+            "Bash(rm -rf ~*)",
+            "Bash(rm -rf $HOME*)",
+            "Bash(:(){ :|:& };:)",
+            "Bash(dd if=*)",
+            "Bash(mkfs*)",
+            "Bash(chmod -R 777 /*)",
+            "Read(**/.env)",
+            "Read(**/.env.*)",
+            "Read(**/id_rsa)",
+            "Read(**/id_ed25519)",
+            "Read(**/*.pem)",
+            "Read(**/secrets/**)",
+            "Bash(cat ~/.ssh/*)",
+            "Bash(curl * | bash)",
+            "Bash(wget * | bash)"
+        ]
+    }
+}
